@@ -25,7 +25,7 @@ This repository contains code used to analyze synthetic medical records represen
   - It outputs a text file (`ICU_covid_cohort.txt`)
 - The third script in the analysis is `ZL_merge_encounters.jl`
   - This script accesses the two output files that were just created (`inpatient_covid_cohort.txt` and `ICU_covid_cohort.txt`) in order to identify any patients that were transferred from an inpatient unit to the ICU.
-  - After adjusting for transfers to the ICU, it calculates the mean length of stay (LOS) and binarizes patients into short LOS (<14 days) or long LOS (>14 days. This outcome is stored in the `outcome` column of the output file
+  - After adjusting for transfers to the ICU, it calculates the mean length of stay (LOS) and binarizes patients into short LOS (<14 days) or long LOS (>14 days). This outcome is stored in the `outcome` column of the output file
   - It outputs a text file that has updated durations inclusive continuous ward and ICU hospital stays and the binary LOS outcome (`encounters_total_dur.txt`).
 
 
