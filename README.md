@@ -13,6 +13,7 @@ This repository contains code used to analyze synthetic medical records represen
 
 - This analysis was run on Brown's HPC server Oscar using Julia 1.7.2 and VS Code 1.22.
 - One file (ZL_plotting.ipynb) uses IJulia and not VS Code.
+- One file (TS_visualizations.jl) was run externally (not on Oscar) using VSCode 1.67.1 and Julia v1.6.17.
 - On Oscar, the file path to the directory containing the original dataset is: `/gpfs/data/biol1555/0_shared/0_data/synthea/100k_synthea_covid19_csv/`
 
 ### Code files and descriptions
@@ -29,21 +30,27 @@ This repository contains code used to analyze synthetic medical records represen
   - It outputs a text file that has updated durations inclusive continuous ward and ICU hospital stays and the binary LOS outcome (`encounters_total_dur.txt`).
 
 
+- `TS_merge_demographics.jl`
+  - This file accesses the `encounters_total_dur.txt` and `proj_patient_demographics.txt`files, and merges/combines these two files together. 
+  - It outputs a text file that has the patients hospitalized with COVID, ICU hospital stays (duration), binary LOS outcome, and the patient demographics. 
 
 [Everyone should add their stuff here]
 
 **Analysis of Age**
 - The first code file is `TS_age_data.jl`
-  - This file accesses the full dataset (`inpatient_full_0427.csv`) and creates the different age groups used in analyzing age. Then, using these age groups, it creates two dataframes/datasets that will be used for visualizations and analysis. 
+  - This file accesses the full dataset (`inpatient_full_0427.csv`) and creates the different age groups used in analyzing age. Then, using these age groups, it creates two dataframes/datasets that will be used for visualizations and analysis. This file uses the Categori
   - It outputs a text file (`agegrp.txt)` that is then used to create the two datasets (this file is merged with the dataset).
   - Outputs a csv file (`duration_agegroup.csv`) that contains duration and age group. 
   - Outputs a csv file (`duration_agegroup_prop.csv`) that contains the frequencies, proportions and percentages of duration by age group. 
 - Visualizations: `TS_visualizations.jl` 
   - This file accesses the `dur_agegroup.csv` and `duration_agegroup_prop.csv` files to create the visualizations. 
-  - The visualizations are: grouped bar plot, histogram, boxplot and pie chart. 
-     - NOTE: 
+  - This file uses StatsPlots and PyPlot.jl to create visualizations of age for duration and LOS outcome.
+    - NOTE: This file was run externally using VSCode 1.67.1 and Julia v1.6.17 (due to the use of PyPlot)
+  - The visualizations are: bar plot, histogram, boxplot and pie chart. 
 - Statistics/Analysis: `TS_stats.jl` 
-  - This 
+  - This file accesses the `duration_agegroup.csv` file. 
+  - This file uses Statistics.jl for statistics (e.g. mean) and HypothesisTests.jl for ANOVA
+  - It calculates the mean duration value for the age groups, and also runs a one-way ANOVA test to determine if there are any statistically significant differences between the means of the different age groups (the means in this case refer to the mean duration values).
 
 
 
