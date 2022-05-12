@@ -36,8 +36,7 @@ This repository contains code used to analyze synthetic medical records represen
 
 [Everyone should add their stuff here]
 
-**Analysis of Age**
-- The first code file is `TS_age_data.jl`
+- The first code file in the analysis of age is `TS_age_data.jl`
   - This file accesses the full dataset (`inpatient_full_0427.csv`) and creates the different age groups used in analyzing age. Then, using these age groups, it creates two dataframes/datasets that will be used for visualizations and analysis. This file uses the Categori
   - It outputs a text file (`agegrp.txt)`, which is then used to create the two datasets (this file is merged with the full dataset).
   - Outputs a csv file (`duration_agegroup.csv`) that contains duration and age group. 
