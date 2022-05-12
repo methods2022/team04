@@ -31,7 +31,7 @@ This repository contains code used to analyze synthetic medical records represen
 
 
 - `TS_merge_demographics.jl`
-  - This file accesses the `encounters_total_dur.txt` and `proj_patient_demographics.txt`files, and merges/combines these two files together. 
+  - This file accesses the `encounters_total_dur.txt` and `proj_patient_demographics.txt` files, and merges/combines these two files together. 
   - It outputs a text file that has the patients hospitalized with COVID, ICU hospital stays (duration), binary LOS outcome, and the patient demographics. 
 
 [Everyone should add their stuff here]
