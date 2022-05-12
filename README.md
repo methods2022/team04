@@ -32,13 +32,14 @@ This repository contains code used to analyze synthetic medical records represen
 
 - `TS_merge_demographics.jl`
   - This file accesses the `encounters_total_dur.txt` and `proj_patient_demographics.txt` files, and merges/combines these two files together. 
-  - It outputs a text file that has the patients hospitalized with COVID, ICU hospital stays (duration), binary LOS outcome, and the patient demographics. 
+  - It outputs a text file that has the patients hospitalized with COVID, ICU hospital stays (duration), binary LOS outcome, and the patient demographics (`encounters_demographics.txt`)
 
 [Everyone should add their stuff here]
 
 - The first code file in the analysis of age is `TS_age_data.jl`
-  - This file accesses the full dataset (`inpatient_full_0427.csv`) and creates the different age groups used in analyzing age. Then, using these age groups, it creates two dataframes/datasets that will be used for visualizations and analysis. This file uses the Categori
-  - It outputs a text file (`agegrp.txt)`, which is then used to create the two datasets (this file is merged with the full dataset).
+  - This file accesses the full dataset (`inpatient_full_0427.csv`) and creates the different age groups used in analyzing age. 
+  - This file uses CategoricalArrays.jl to order age group numerically. 
+  - It outputs a text file (`agegrp.txt)`, which is then called in and merged with the full dataset to create the two dataframes/datasets that will be used for visualizations and analysis of age. 
   - Outputs a csv file (`duration_agegroup.csv`) that contains duration and age group. 
   - Outputs a csv file (`duration_agegroup_prop.csv`) that contains the frequencies, proportions and percentages of duration by age group. 
 - Visualizations: `TS_visualizations.jl` 
