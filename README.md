@@ -42,12 +42,12 @@ This repository contains code used to analyze synthetic medical records represen
   - It outputs a text file (`agegrp.txt)`, which is then called in and merged with the full dataset to create the two dataframes/datasets that will be used for visualizations and analysis of age. 
   - Outputs a csv file (`duration_agegroup.csv`) that contains duration and age group. 
   - Outputs a csv file (`duration_agegroup_prop.csv`) that contains the frequencies, proportions and percentages of duration by age group. 
-- Visualizations: `TS_visualizations.jl` 
+- Visualizations for age : `TS_visualizations.jl` 
   - This file accesses the `dur_agegroup.csv` and `duration_agegroup_prop.csv` files to create the visualizations. 
   - This file uses StatsPlots and PyPlot.jl to create visualizations of age for duration and LOS outcome.
     - NOTE: This file was run externally using VSCode 1.67.1 and Julia v1.6.17 (due to the use of PyPlot)
   - The visualizations are: bar plot, histogram, boxplot and pie chart. 
-- Statistics/Analysis: `TS_stats.jl` 
+- Statistics/Analysis of age: `TS_stats.jl` 
   - This file accesses the `duration_agegroup.csv` file. 
   - This file uses Statistics.jl for statistics (e.g. mean) and HypothesisTests.jl for ANOVA
   - It calculates the mean duration value for the age groups, and also runs a one-way ANOVA test to determine if there are any statistically significant differences between the means of the different age groups (the means in this case refer to the mean duration values).
