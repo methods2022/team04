@@ -34,6 +34,43 @@ This repository contains code used to analyze synthetic medical records represen
   - This file accesses the `encounters_total_dur.txt` and `proj_patient_demographics.txt` files, and merges/combines these two files together. 
   - It outputs a text file that has the patients hospitalized with COVID, ICU hospital stays (duration), binary LOS outcome, and the patient demographics (`encounters_demographics.txt`)
 
+- `LY_ml_encounters_demographics.jl`
+  - This file accesses the `encounters_demographics.txt` file. 
+  - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, and EVO Decision Trees, to train all the features within the file. 
+  - It prints out the value of accuracy and f1 score for the traing. 
+
+- `LY_ml_inpatient_full_0.jl`
+  - This file accesses the `inpatient_full_0427.txt` file. 
+  - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train all demographics and two conditions features within the file. 
+  - It pirnts out the value of accuracy and f1 score for the traing. 
+
+- `LY_ml_inpatient_full_1.jl`
+  - This file accesses the `inpatient_full_0427.txt` file. 
+  - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train 24 features within the file (by removing one feature randomly). 
+  - It pirnts out the value of accuracy and f1 score for the traing. 
+
+- `LY_ml_inpatient_full_2.jl`
+  - This file accesses the `inpatient_full_0427.txt` file. 
+  - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train 23 features within the file (by removing two features randomly). 
+  - It pirnts out the value of accuracy and f1 score for the traing. 
+
+- `LY_ml_inpatient_full_5.jl`
+  - This file accesses the `inpatient_full_0427.txt` file. 
+  - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train 23 features within the file (by removing five features randomly). 
+  - It pirnts out the value of accuracy and f1 score for the traing. 
+
+- `LY_ml_inpatient_full_10.jl`
+  - This file accesses the `inpatient_full_0427.txt` file. 
+  - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train 23 features within the file (by removing ten features randomly). 
+  - It pirnts out the value of accuracy and f1 score for the traing. 
+
+- `LY_plot.jl`
+  - This file accesses the `inpatient_full_0427.txt` file. 
+  - It plots the distribution of age and duration within Julia VegaLite and VegaDatasets plot packages. (Output file name: inpatient.pdf)
+
+
+
+
 [Everyone should add their stuff here]
 
 - The first code file in the analysis of age is `TS_age_data.jl`
