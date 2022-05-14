@@ -52,7 +52,12 @@ This repository contains code used to analyze synthetic medical records represen
   - This file uses Statistics.jl for statistics (e.g. mean) and HypothesisTests.jl for ANOVA
   - It calculates the mean duration value for the age groups, and also runs a one-way ANOVA test to determine if there are any statistically significant differences between the means of the different age groups (the means in this case refer to the mean duration values).
 
-
+- Visualizations and analysis between Case and Non-Case cohorts: 'JW_cases.py' and 'JW_racial_case_distribution.py'
+  -   accesses the 'inpatient_demog_obs_full.csv'
+  -   JW_racial_case_distribution.py compares the two case/non-case cohorts and calculates the racial proportions in each; no significant differences were found; Runs a t-test and calculates p value, niether of which intuitively provided new information
+  -   JW_cases compares age and blood pressure, commonly implicated variables in disease severity, by calculating the proportion of each condition in the each cohort. No significant differences were found.
+- Visualizations and analysis for the preliminary data, including all patients: 'JW_viability.py' and 'JW_all_age.py'
+  - JW_viability.py was used to look for null values in specific columns, particularly the ones suspected of biasing the machine learning model. BMI was found to have a dispropotionate number of null values.
 
 - `ZL_plotting.ipynb` must be run using IJulia.
   - IJulia can be installed and run using instructures [here](https://github.com/JuliaLang/IJulia.jl).
