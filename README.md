@@ -16,6 +16,10 @@ This repository contains code used to analyze synthetic medical records represen
 - One file (TS_visualizations.jl) was run externally (not on Oscar) using VSCode 1.67.1 and Julia v1.6.17.
 - On Oscar, the file path to the directory containing the original dataset is: `/gpfs/data/biol1555/0_shared/0_data/synthea/100k_synthea_covid19_csv/`
 
+### Flow chart
+   <img src="plots/flow_chat v2.0.png"/>
+
+
 ### Code files and descriptions
 
 - The first script in the analysis is `ZL_encounter_inpatient.jl`
