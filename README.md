@@ -39,33 +39,38 @@ This repository contains code used to analyze synthetic medical records represen
   - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, and EVO Decision Trees, to train all the features within the file. 
   - It prints out the value of accuracy and f1 score for the traing. 
 
+- `DL_covid_observations.jl`
+  - This script accesses the `encounters_demographics.txt`, `observations.csv`, and `conditions.csv` files.
+  - It calculates the age for all patients, extracts the observations and conditions for all patients, and merges/combines all of these features together.
+  - It outputs a CSV file `inpatient_full_0427.csv` that containes all patients hospitalized with COVID, ICU hospital stays (duration), binary LOS outcome, and all demographic, physiological, and comorbid features.
+
 - `LY_ml_inpatient_full_0.jl`
-  - This file accesses the `inpatient_full_0427.txt` file. 
+  - This file accesses the `inpatient_full_0427.csv` file. 
   - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train all demographics and two conditions features within the file. 
   - It prints out the value of accuracy and f1 score for the training. 
 
 - `LY_ml_inpatient_full_1.jl`
-  - This file accesses the `inpatient_full_0427.txt` file. 
+  - This file accesses the `inpatient_full_0427.csv` file. 
   - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train 24 features within the file (by removing one feature randomly). 
   - It prints out the value of accuracy and f1 score for the training. 
 
 - `LY_ml_inpatient_full_2.jl`
-  - This file accesses the `inpatient_full_0427.txt` file. 
+  - This file accesses the `inpatient_full_0427.csv` file. 
   - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train 23 features within the file (by removing two features randomly). 
   - It prints out the value of accuracy and f1 score for the training. 
 
 - `LY_ml_inpatient_full_5.jl`
-  - This file accesses the `inpatient_full_0427.txt` file. 
+  - This file accesses the `inpatient_full_0427.csv` file. 
   - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train 23 features within the file (by removing five features randomly). 
   - It prints out the value of accuracy and f1 score for the training. 
 
 - `LY_ml_inpatient_full_10.jl`
-  - This file accesses the `inpatient_full_0427.txt` file. 
+  - This file accesses the `inpatient_full_0427.csv` file. 
   - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train 23 features within the file (by removing ten features randomly). 
   - It prints out the value of accuracy and f1 score for the training. 
 
 - `LY_plot.jl`
-  - This file accesses the `inpatient_full_0427.txt` file. 
+  - This file accesses the `inpatient_full_0427.csv` file. 
   - It plots the distribution of age and duration within Julia VegaLite and VegaDatasets plot packages. (Output file name: inpatient.pdf)
 
 - The first code file in the analysis of age is `TS_age_data.jl`
@@ -83,6 +88,10 @@ This repository contains code used to analyze synthetic medical records represen
   - This file accesses the `duration_agegroup.csv` file. 
   - This file uses Statistics.jl for statistics (e.g. mean) and HypothesisTests.jl for ANOVA
   - It calculates the mean duration value for the age groups, and also runs a one-way ANOVA test to determine if there are any statistically significant differences between the means of the different age groups (the means in this case refer to the mean duration values).
+
+- Visualization and analysis for comorbid conditions: `DL_conditions_plotting.jl`
+  - This file accesses the `inpatient_full_0427.csv` file
+  - This file uses Statsplots to create histograms of hospitalization LOS based on the two comorbid conditions (hypertension and diabetes)
 
 - Visualizations and analysis between Case and Non-Case cohorts: `JW_cases.py` and `JW_racial_case_distribution.py`
   -   accesses the `inpatient_demog_obs_full.csv`
