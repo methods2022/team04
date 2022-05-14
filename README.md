@@ -42,36 +42,31 @@ This repository contains code used to analyze synthetic medical records represen
 - `LY_ml_inpatient_full_0.jl`
   - This file accesses the `inpatient_full_0427.txt` file. 
   - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train all demographics and two conditions features within the file. 
-  - It pirnts out the value of accuracy and f1 score for the traing. 
+  - It prints out the value of accuracy and f1 score for the training. 
 
 - `LY_ml_inpatient_full_1.jl`
   - This file accesses the `inpatient_full_0427.txt` file. 
   - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train 24 features within the file (by removing one feature randomly). 
-  - It pirnts out the value of accuracy and f1 score for the traing. 
+  - It prints out the value of accuracy and f1 score for the training. 
 
 - `LY_ml_inpatient_full_2.jl`
   - This file accesses the `inpatient_full_0427.txt` file. 
   - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train 23 features within the file (by removing two features randomly). 
-  - It pirnts out the value of accuracy and f1 score for the traing. 
+  - It prints out the value of accuracy and f1 score for the training. 
 
 - `LY_ml_inpatient_full_5.jl`
   - This file accesses the `inpatient_full_0427.txt` file. 
   - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train 23 features within the file (by removing five features randomly). 
-  - It pirnts out the value of accuracy and f1 score for the traing. 
+  - It prints out the value of accuracy and f1 score for the training. 
 
 - `LY_ml_inpatient_full_10.jl`
   - This file accesses the `inpatient_full_0427.txt` file. 
   - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train 23 features within the file (by removing ten features randomly). 
-  - It pirnts out the value of accuracy and f1 score for the traing. 
+  - It prints out the value of accuracy and f1 score for the training. 
 
 - `LY_plot.jl`
   - This file accesses the `inpatient_full_0427.txt` file. 
   - It plots the distribution of age and duration within Julia VegaLite and VegaDatasets plot packages. (Output file name: inpatient.pdf)
-
-
-
-
-[Everyone should add their stuff here]
 
 - The first code file in the analysis of age is `TS_age_data.jl`
   - This file accesses the full dataset (`inpatient_full_0427.csv`) and creates the different age groups used in analyzing age. 
@@ -89,12 +84,12 @@ This repository contains code used to analyze synthetic medical records represen
   - This file uses Statistics.jl for statistics (e.g. mean) and HypothesisTests.jl for ANOVA
   - It calculates the mean duration value for the age groups, and also runs a one-way ANOVA test to determine if there are any statistically significant differences between the means of the different age groups (the means in this case refer to the mean duration values).
 
-- Visualizations and analysis between Case and Non-Case cohorts: 'JW_cases.py' and 'JW_racial_case_distribution.py'
-  -   accesses the 'inpatient_demog_obs_full.csv'
-  -   JW_racial_case_distribution.py compares the two case/non-case cohorts and calculates the racial proportions in each; no significant differences were found; Runs a t-test and calculates p value, niether of which intuitively provided new information
-  -   JW_cases compares age and blood pressure, commonly implicated variables in disease severity, by calculating the proportion of each condition in the each cohort. No significant differences were found.
-- Visualizations and analysis for the preliminary data, including all patients: 'JW_viability.py' and 'JW_all_age.py'
-  - JW_viability.py was used to look for null values in specific columns, particularly the ones suspected of biasing the machine learning model. BMI was found to have a dispropotionate number of null values.
+- Visualizations and analysis between Case and Non-Case cohorts: `JW_cases.py` and `JW_racial_case_distribution.py`
+  -   accesses the `inpatient_demog_obs_full.csv`
+  -   `JW_racial_case_distribution.py` compares the two case/non-case cohorts and calculates the racial proportions in each; no significant differences were found; Runs a t-test and calculates p value, niether of which intuitively provided new information
+  -   `JW_cases.py` compares age and blood pressure, commonly implicated variables in disease severity, by calculating the proportion of each condition in the each cohort. No significant differences were found.
+- Visualizations and analysis for the preliminary data, including all patients: `JW_viability.py` and `JW_all_age.py`
+  - `JW_viability.py` was used to look for null values in specific columns, particularly the ones suspected of biasing the machine learning model. BMI was found to have a dispropotionate number of null values.
 
 - `ZL_plotting.ipynb` must be run using IJulia.
   - IJulia can be installed and run using instructures [here](https://github.com/JuliaLang/IJulia.jl).
