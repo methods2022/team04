@@ -4,6 +4,9 @@
 ### Project overview
 This repository contains code used to analyze synthetic medical records representative of patients during the COVID-19 pandemic. The provided code allows for exploratory analysis of demographic traits among hospitalized COVID-19 patients and uses machine learning to try and predict patients with long hospitalizations due to COVID-19.
 
+### Flow chart of prject
+   <img src="plots/flow_chat v2.0.png"/>
+
 ### Data source
 
 - The 100k COVID-19 synthea dataset was downloaded from Synthea [here](https://synthea.mitre.org/downloads)
@@ -12,13 +15,15 @@ This repository contains code used to analyze synthetic medical records represen
 ### Setup
 
 - This analysis was run on Brown's HPC server Oscar using Julia 1.7.2 and VS Code 1.22.
-- One file (ZL_plotting.ipynb) uses IJulia and not VS Code.
+- One file (ZL_plotting.ipynb) uses IJulia and not VS Code. (Note: It is listed as a Jupyter notebook, but uses the Julia language.)
 - One file (TS_visualizations.jl) was run externally (not on Oscar) using VSCode 1.67.1 and Julia v1.6.17.
 - On Oscar, the file path to the directory containing the original dataset is: `/gpfs/data/biol1555/0_shared/0_data/synthea/100k_synthea_covid19_csv/`
 
-### Flow chart
-   <img src="plots/flow_chat v2.0.png"/>
 
+### Repo organization
+- All visualization files can be found in `Plots`.
+- All intermediate data files can be found in `Data`.
+- All code scripts are in the main repository.
 
 ### Code files and descriptions
 
