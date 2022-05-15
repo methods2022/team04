@@ -22,5 +22,5 @@ inpatient = @vlplot(
                     }
                 );
 # save the plot
-save("../plots/inpatient.pdf", inpatient)
+save("../plots/inpatient.png", inpatient)
 println("Plot saved!")
