@@ -43,6 +43,13 @@ This repository contains code used to analyze synthetic medical records represen
   - This file accesses the `encounters_total_dur.txt` and `proj_patient_demographics.txt` files, and merges/combines these two files together. 
   - It outputs a text file that has the patients hospitalized with COVID, ICU hospital stays (duration), binary LOS outcome, and the patient demographics (`encounters_demographics.txt`)
 
+
+- `LY_patient_demographics.jl`
+  - This file extract the patient demogrphics from `patient.csv` file. 
+  - We extracted patient_ID, birthdate, deathday, race, ethnicity and gender information from there. 
+  - The output file is a text file with header. (`proj_patient_demographics.txt`)
+
+
 - `LY_ml_encounters_demographics.jl`
   - This file accesses the `encounters_demographics.txt` file. 
   - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, and EVO Decision Trees, to train all the features within the file. 
