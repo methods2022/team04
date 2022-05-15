@@ -80,7 +80,7 @@ This repository contains code used to analyze synthetic medical records represen
 
 - `LY_plot.jl`
   - This file accesses the `inpatient_full_0427.csv` file. 
-  - It plots the distribution of age and duration within Julia VegaLite and VegaDatasets plot packages. (Output file name: inpatient.pdf)
+  - It plots the distribution of age and duration within Julia VegaLite and VegaDatasets plot packages. (Output file name: inpatient.png)
 
 - The first code file in the analysis of age is `TS_age_data.jl`
   - This file accesses the full dataset (`inpatient_full_0427.csv`) and creates the different age groups used in analyzing age. 
