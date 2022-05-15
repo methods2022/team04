@@ -78,10 +78,6 @@ This repository contains code used to analyze synthetic medical records represen
   - User can choose one of the algorithms from Linear Binary Tree, Decision Tree, Random Forest, EVO Decision Trees and SVM, to train 23 features within the file (by removing ten features randomly). 
   - It prints out the value of accuracy and f1 score for the training. 
 
-- `LY_plot.jl`
-  - This file accesses the `inpatient_full_0427.csv` file. 
-  - It plots the distribution of age and duration within Julia VegaLite and VegaDatasets plot packages. (Output file name: inpatient.png)
-
 - The first code file in the analysis of age is `TS_age_data.jl`
   - This file accesses the full dataset (`inpatient_full_0427.csv`) and creates the different age groups used in analyzing age. 
   - This file uses CategoricalArrays.jl to order age group numerically. 
