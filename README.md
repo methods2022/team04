@@ -38,17 +38,14 @@ This repository contains code used to analyze synthetic medical records represen
   - After adjusting for transfers to the ICU, it calculates the mean length of stay (LOS) and binarizes patients into short LOS (<14 days) or long LOS (>14 days). This outcome is stored in the `outcome` column of the output file
   - It outputs a text file that has updated durations inclusive continuous ward and ICU hospital stays and the binary LOS outcome (`encounters_total_dur.txt`).
 
-
-- `TS_merge_demographics.jl`
-  - This file accesses the `encounters_total_dur.txt` and `proj_patient_demographics.txt` files, and merges/combines these two files together. 
-  - It outputs a text file that has the patients hospitalized with COVID, ICU hospital stays (duration), binary LOS outcome, and the patient demographics (`encounters_demographics.txt`)
-
-
 - `LY_patient_demographics.jl`
   - This file extract the patient demogrphics from `patient.csv` file. 
   - We extracted patient_ID, birthdate, deathday, race, ethnicity and gender information from there. 
   - The output file is a text file with header. (`proj_patient_demographics.txt`)
 
+- `TS_merge_demographics.jl`
+  - This file accesses the `encounters_total_dur.txt` and `proj_patient_demographics.txt` files, and merges/combines these two files together. 
+  - It outputs a text file that has the patients hospitalized with COVID, ICU hospital stays (duration), binary LOS outcome, and the patient demographics (`encounters_demographics.txt`)
 
 - `LY_ml_encounters_demographics.jl`
   - This file accesses the `encounters_demographics.txt` file. 
