@@ -4,7 +4,7 @@
 ### Project overview
 This repository contains code used to analyze synthetic medical records representative of patients during the COVID-19 pandemic. The provided code allows for exploratory analysis of demographic traits among hospitalized COVID-19 patients and uses machine learning to try and predict patients with long hospitalizations due to COVID-19.
 
-### Flow chart of prject
+### Flow chart of project
    <img src="plots/flow_chat v2.0.png"/>
 
 ### Data source
